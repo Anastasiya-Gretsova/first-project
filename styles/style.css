@@ -1,0 +1,359 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 148px 1fr;
+  place-items: center;
+  padding: 92px 17px;
+}
+
+.header-menu {
+  line-height: 21.13px; /* Высота строки */
+}
+
+.header-links-list {
+  display: flex; /* Гибкое расположение элементов */
+  gap: 0 32px; /* Расстояние между элементами */
+}
+
+.header-link {
+  letter-spacing: 0.01em; /* Межбуквенное расстояние */
+  text-decoration: underline; /* Подчеркивание ссылок */
+  text-decoration-thickness: 1px; /* Толщина подчеркивания */
+  text-decoration-skip-ink: false; /* Подчеркивание проходит под буквами */
+  text-underline-offset: 4px; /* Отступ подчеркивания от текста */
+}
+
+.header-link-active {
+  letter-spacing: normal; /* Стандартное межбуквенное расстояние */
+  text-decoration: none; /* Убираем подчеркивание у активной ссылки */
+}
+
+.header-links-list-item {
+  list-style: circle; /* Маркеры списка в виде кружков */
+}
+
+.header-links-list-item-no-bullet {
+  list-style: none; /* Убираем маркеры у пунктов списка */
+}
+
+.header-logo {
+  display: block; /* Блочное отображение логотипа */
+}
+
+.header-logo-image {
+  width: 136px; /* Фиксированная ширина логотипа */
+}
+
+/* Стили для адреса */
+.address {
+  font-size: 18px; /* Размер шрифта */
+  font-style: normal; /* Обычный стиль шрифта (не курсив) */
+  line-height: 24.3px; /* Высота строки */
+}
+
+.address-link {
+  letter-spacing: 0.01em; /* Межбуквенное расстояние */
+  text-decoration: underline; /* Подчеркивание ссылок */
+  text-decoration-thickness: 1px; /* Толщина подчеркивания */
+  text-decoration-skip-ink: false; /* Подчеркивание проходит под буквами */
+  text-underline-offset: 4px; /* Отступ подчеркивания от текста */
+}
+
+.header-address {
+  justify-self: end; /* Выравнивание по правому краю */
+  padding-right: 70px; /* Правый отступ */
+}
+
+/* Стили для обложки */
+.cover {
+  position: relative; /* Относительное позиционирование */
+  display: flex; /* Гибкое расположение элементов */
+  flex-direction: column; /* Вертикальное расположение */
+  justify-content: space-between; /* Распределение пространства между элементами */
+  padding: 50px; /* Внутренние отступы */
+  color: #ffffff; /* Белый цвет текста */
+  text-transform: uppercase; /* Все буквы заглавные */
+  background-image: url(../images/cover.jpg); /* Фоновое изображение */
+  background-position: center; /* Центрирование фона */
+  background-size: cover; /* Растягивание фона на всю область */
+}
+
+.overlay {
+  position: absolute; /* Абсолютное позиционирование */
+  inset: 0 0; /* Растягивание на всю область родителя */
+  z-index: 0; /* Нижний слой */
+  opacity: 0.6; /* Полупрозрачность */
+  background-color: black; /* Черный фон */
+}
+
+.cover-title {
+  position: relative; /* Относительное позиционирование */
+  z-index: 1; /* Слой выше overlay */
+  padding: 115px 0; /* Внутренние отступы */
+  font-weight: 700; /* Жирное начертание */
+  font-size: 100px; /* Очень большой размер шрифта */
+  line-height: 115px; /* Высота строки */
+  letter-spacing: 0.3em; /* Большое межбуквенное расстояние */
+}
+
+.aligned-text {
+  display: block; /* Блочное отображение */
+}
+
+.letter-spacing-extended {
+  letter-spacing: 0.6em; /* Очень большое межбуквенное расстояние */
+}
+
+.aligned-text-center {
+  line-height: 140px; /* Большая высота строки */
+  text-align: center; /* Выравнивание по центру */
+}
+
+.aligned-text-right {
+  line-height: 100px; /* Высота строки */
+  text-align: end; /* Выравнивание по правому краю */
+}
+
+.no-letter-spacing {
+  letter-spacing: 0; /* Без межбуквенного расстояния */
+}
+
+.cover-description {
+  position: relative; /* Относительное позиционирование */
+  z-index: 1; /* Слой выше overlay */
+  display: flex; /* Гибкое расположение элементов */
+  justify-content: space-between; /* Распределение пространства между элементами */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  margin-top: 20px; /* Верхний отступ */
+  font-size: 22px; /* Размер шрифта */
+}
+
+.cover-description-text {
+  padding-left: 28px; /* Левый отступ */
+  line-height: 28px; /* Высота строки */
+  word-spacing: 20px; /* Расстояние между словами */
+}
+
+.cover-description-text span {
+  word-spacing: 18px; /* Расстояние между словами внутри span */
+}
+
+/* Стили для кнопки ставки */
+.bet-button {
+  border: 1px white solid; /* Белая рамка */
+  padding: 12px 32px; /* Внутренние отступы */
+  color: #ffffff; /* Белый текст */
+  font-family: Raleway, sans-serif; /* Шрифт */
+  font-size: 22px; /* Размер шрифта */
+  line-height: 25.83px; /* Высота строки */
+  text-transform: uppercase; /* Все буквы заглавные */
+  background-color: transparent; /* Прозрачный фон */
+}
+
+/* Стили для секции с лотами */
+.lots {
+  margin: 179px 24px 146px; /* Внешние отступы */
+}
+
+.lots-heading {
+  padding-left: 40px; /* Левый отступ */
+  font-weight: 700; /* Жирное начертание */
+  font-size: 40px; /* Размер шрифта */
+  line-height: 47px; /* Высота строки */
+  text-transform: uppercase; /* Все буквы заглавные */
+}
+
+.lots-card-list {
+  display: flex; /* Гибкое расположение элементов */
+  flex-direction: row; /* Горизонтальное расположение */
+  flex-wrap: wrap; /* Перенос на новую строку при необходимости */
+  gap: 25px; /* Расстояние между карточками */
+  margin-top: 27px; /* Верхний отступ */
+  color: #fff; /* Белый текст */
+}
+
+.lots-card-list-item {
+  position: relative; /* Относительное позиционирование */
+  list-style: none; /* Убираем маркеры списка */
+}
+
+.card-link {
+  display: block; /* Блочное отображение */
+  width: max-content; /* Ширина по содержимому */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Фоновые изображения для разных типов карточек */
+.card-type-film {
+  background: url(../images/card-lot-01.jpg);
+}
+
+.card-type-book {
+  background: url(../images/card-lot-02.jpg);
+}
+
+.card-type-picture {
+  background: url(../images/card-lot-03.jpg);
+}
+
+/* Общие стили для карточек */
+.card {
+  position: relative; /* Относительное позиционирование */
+  z-index: 1; /* Слой выше overlay */
+  display: flex; /* Гибкое расположение элементов */
+  flex-direction: column; /* Вертикальное расположение */
+  justify-content: space-between; /* Распределение пространства между элементами */
+  width: 334px; /* Фиксированная ширина */
+  min-height: 563px; /* Минимальная высота */
+  padding: 51px 40px 48px; /* Внутренние отступы */
+  background-position: center; /* Центрирование фона */
+  background-size: cover; /* Растягивание фона на всю область */
+}
+
+.card-title {
+  z-index: 1; /* Слой выше overlay */
+  font-weight: 700; /* Жирное начертание */
+  font-size: 22px; /* Размер шрифта */
+  line-height: 26.4px; /* Высота строки */
+  text-decoration: underline; /* Подчеркивание */
+  text-decoration-thickness: 1px; /* Толщина подчеркивания */
+  text-decoration-skip-ink: false; /* Подчеркивание проходит под буквами */
+  text-underline-offset: 3px; /* Отступ подчеркивания от текста */
+  text-transform: uppercase; /* Все буквы заглавные */
+}
+
+.card-text {
+  z-index: 1; /* Слой выше overlay */
+  font-weight: 400; /* Обычное начертание */
+  font-size: 20px; /* Размер шрифта */
+  line-height: 24px; /* Высота строки */
+}
+
+.card-text span {
+  letter-spacing: 0.13em; /* Межбуквенное расстояние */
+}
+
+/* Стили для ссылки "посмотреть больше" */
+.lots-look-more-link {
+  display: inline-block; /* Строчно-блочное отображение */
+  margin: 30px 0 0 40px; /* Внешние отступы */
+  font-weight: 400; /* Обычное начертание */
+  font-size: 20px; /* Размер шрифта */
+  line-height: 23.48px; /* Высота строки */
+  text-decoration: underline; /* Подчеркивание */
+  text-decoration-thickness: 1px; /* Толщина подчеркивания */
+  text-underline-offset: 5px; /* Отступ подчеркивания от текста */
+  cursor: pointer; /* Курсор в виде указателя */
+}
+
+/* Стили для секции "Об аукционе" */
+.about {
+  display: grid; /* Используем CSS Grid */
+  grid-template-columns: min-content 1fr; /* Две колонки */
+  gap: 72px; /* Расстояние между колонками */
+  margin: 0 24px 180px; /* Внешние отступы */
+  padding: 37px 0 0 47px; /* Внутренние отступы */
+}
+
+.about-logo {
+  display: flex; /* Гибкое расположение элементов */
+  justify-items: center; /* Выравнивание по центру по горизонтали */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  width: 240px; /* Фиксированная ширина */
+  height: 240px; /* Фиксированная высота */
+  border-radius: 120px; /* Скругление углов (круг) */
+  background-color: black; /* Черный фон */
+}
+
+.about-logo-image {
+  height: 114px; /* Фиксированная высота изображения */
+}
+
+.about-title {
+  margin: 100px 0; /* Внешние отступы */
+  font-weight: 700; /* Жирное начертание */
+  font-size: 40px; /* Размер шрифта */
+  line-height: 46.96px; /* Высота строки */
+  text-transform: uppercase; /* Все буквы заглавные */
+}
+
+.about-text {
+  margin-bottom: 24px; /* Нижний отступ */
+  font-weight: 400; /* Обычное начертание */
+  font-size: 20px; /* Размер шрифта */
+  line-height: 24px; /* Высота строки */
+}
+
+/* Специфичные стили для текста в секции "О нас" */
+.about-column p:last-of-type {
+  margin-bottom: 0; /* Убираем нижний отступ у последнего параграфа */
+}
+
+.about p:first-of-type {
+  letter-spacing: 0.01em; /* Межбуквенное расстояние */
+}
+
+.about p:first-of-type span:nth-of-type(1) {
+  letter-spacing: normal; /* Стандартное межбуквенное расстояние */
+}
+
+.about p:first-of-type span:nth-of-type(2) {
+  letter-spacing: 0.02em; /* Межбуквенное расстояние */
+}
+
+.about p:first-of-type span:nth-of-type(3) {
+  letter-spacing: -0.01em; /* Отрицательное межбуквенное расстояние */
+}
+
+.about p:first-of-type span:nth-of-type(4) {
+  letter-spacing: 0.03em; /* Межбуквенное расстояние */
+}
+
+.about p:nth-of-type(2) span:first-child {
+  letter-spacing: 0.04em; /* Межбуквенное расстояние */
+}
+
+.about-column p:nth-of-type(2) span:last-child {
+  letter-spacing: 0.01em; /* Межбуквенное расстояние */
+}
+
+/* Стили для подвала */
+.footer {
+  display: grid; /* Используем CSS Grid */
+  grid-template-columns: 1fr 149px 1fr; /* Три колонки */
+  padding: 0px 50px 88px; /* Внутренние отступы */
+}
+
+.footer-menu {
+  font-weight: 400; /* Обычное начертание */
+  font-size: 18px; /* Размер шрифта */
+  line-height: 21.13px; /* Высота строки */
+  text-align: center; /* Выравнивание по центру */
+  list-style: none; /* Убираем маркеры списка */
+}
+
+.footer-menu-list-item {
+  list-style: none; /* Убираем маркеры списка */
+}
+
+.footer-menu-link {
+  border-bottom: black 1px solid; /* Нижняя граница */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer-menu-link-active {
+  border: none; /* Убираем границу у активной ссылки */
+}
+
+.footer-social-list {
+  display: flex; /* Гибкое расположение элементов */
+  justify-content: end; /* Выравнивание по правому краю */
+  gap: 48px; /* Расстояние между элементами */
+}
+
+.footer-social-list-item {
+  list-style: none; /* Убираем маркеры списка */
+}
+
+.footer-social-icon {
+  width: 48px; /* Фиксированная ширина иконок */
+}
